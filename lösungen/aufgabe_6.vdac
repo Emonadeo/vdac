@@ -1,8 +1,9 @@
 // Lernmodul 1
 module lernmodul_1 {
     chapter kapitel_1 {
+        text summary Lorem ipsum
+
         page seite_1 {
-            text summary Lorem ipsum
             task aufgabe_1 {
                 text title Erste Aufgabe
                 text description 
