@@ -1,0 +1,55 @@
+select difficulty {
+    option easy Einfach
+    option medium Mittel
+    option hard Schwer
+}
+
+// Lernmodul 1
+module lernmodul_1 {
+    text:url sachbuch https://example.com/
+    text:email betreuer max.mustermann@example.com
+
+    chapter kapitel_1 {
+        text summary Lorem ipsum
+
+        page seite_1 {
+            task aufgabe_1 {
+                text title Erste Aufgabe
+                text description 
+                    | Lorem ipsum dolor sit amet
+                    | consectetur adipiscing elit
+                number time_limit 90
+                boolean exam_relevant true
+                difficulty difficulty medium
+            }
+            task aufgabe_2 {
+            }
+        }
+        page seite_2 {
+            task aufgabe_1 {
+            }
+        }
+    }
+    chapter kapitel_2 {
+        page seite_1 {
+            task aufgabe_1 {
+            }
+        }
+    }
+
+    path kapitel_1.seite_1.aufgabe_1 ->
+        kapitel_1.seite_1.aufgabe_2 ->
+        kapitel_1.seite_2.aufgabe_1 ->
+        kapitel_2.seite_1.aufgabe_1
+
+    path kapitel_1 -> kapitel_2
+}
+// Lernmodul 2
+module lernmodul_2 {
+    chapter kapitel_1 {
+        page seite_1 {
+            task aufgabe_1 {
+            }
+        }
+    }
+}
