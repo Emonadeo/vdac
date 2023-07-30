@@ -1,0 +1,10 @@
+module lernmodul_1 {
+    chapter kapitel_1 {
+    }
+    chapter kapitel_2 {
+    }
+}
+module lernmodul_2 {
+    chapter kapitel_1 {
+    }
+}
